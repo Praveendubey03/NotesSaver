@@ -8,7 +8,7 @@ if (storedPastes) {
   try {
     pastes = JSON.parse(storedPastes);
   } catch (error) {
-    console.error("Error parsing stored pastes:", error);
+    console.error("Error parsing stored Notes:", error);
     pastes = [];
   }
 }
@@ -25,7 +25,7 @@ export const pasteSlice = createSlice({
       const paste = action.payload;
       state.pastes.push(paste);
       localStorage.setItem("pastes", JSON.stringify(state.pastes));
-      toast.success("Paste Created Successfully");
+      toast.success("Note Created Successfully");
     },
     updateToPastes: (state, action) => {
       // Your logic here
@@ -37,7 +37,7 @@ export const pasteSlice = createSlice({
 
         localStorage.setItem("pastes", JSON.stringify(state.pastes));
 
-        toast.success("Paste updated")
+        toast.success("Note updated")
       }
     },
     resetAllPastes: (state, action) => {
@@ -58,7 +58,7 @@ export const pasteSlice = createSlice({
         localStorage.setItem("pastes", JSON.stringify
           (state.pastes));
 
-          toast.success("Paste deleted");
+          toast.success("Note deleted");
       }
     },
   },

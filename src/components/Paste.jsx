@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { NavLink } from "react-router-dom";
 import { Copy, Share2, Trash2 , Pencil, Eye } from "lucide-react";
 import dayjs from "dayjs";
-
+import '../style2.css';
 const Paste = () => {
   const pastes = useSelector((state) => state.paste.pastes);
   const [searchTerm, setSearchTerm] = useState('');

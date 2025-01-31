@@ -12,7 +12,7 @@ const Navbar = () => {
           </NavLink></div>
         <div>
           <NavLink to="/paste">
-            Pastes
+            Notes
           </NavLink>
         </div>
       </div>
